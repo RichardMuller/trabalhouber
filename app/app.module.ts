@@ -2,9 +2,9 @@ import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
-import { CameraTabDefaultPagePage } from '../pages/camera-tab-default-page/camera-tab-default-page';
-import { CartTabDefaultPagePage } from '../pages/cart-tab-default-page/cart-tab-default-page';
-import { CloudTabDefaultPagePage } from '../pages/cloud-tab-default-page/cloud-tab-default-page';
+import { CMeraPage } from '../pages/c-mera/c-mera';
+import { ImagensPage } from '../pages/imagens/imagens';
+import { OpEsPage } from '../pages/op-es/op-es';
 import { TabsControllerPage } from '../pages/tabs-controller/tabs-controller';
 
 
@@ -14,9 +14,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 @NgModule({
   declarations: [
     MyApp,
-    CameraTabDefaultPagePage,
-    CartTabDefaultPagePage,
-    CloudTabDefaultPagePage,
+    CMeraPage,
+    ImagensPage,
+    OpEsPage,
     TabsControllerPage
   ],
   imports: [
@@ -26,9 +26,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    CameraTabDefaultPagePage,
-    CartTabDefaultPagePage,
-    CloudTabDefaultPagePage,
+    CMeraPage,
+    ImagensPage,
+    OpEsPage,
     TabsControllerPage
   ],
   providers: [
