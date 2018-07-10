@@ -7,6 +7,8 @@ import { ImagensPage } from '../pages/imagens/imagens';
 import { OpEsPage } from '../pages/op-es/op-es';
 import { TabsControllerPage } from '../pages/tabs-controller/tabs-controller';
 
+import { Camera } from '@ionic-native/camera';
+
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -34,6 +36,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   providers: [
     StatusBar,
     SplashScreen,
+	Camera,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

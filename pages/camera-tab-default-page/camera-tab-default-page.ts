@@ -1,14 +1,26 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import { Camera, CameraOptions } from '@ionic-native/camera';
 
 @Component({
   selector: 'page-camera-tab-default-page',
   templateUrl: 'camera-tab-default-page.html'
 })
 export class CameraTabDefaultPagePage {
-  // this tells the tabs component which Pages
-  // should be each tab's root Page
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController, private camera: Camera) {
+
   }
-  
+
+  openCamera(){
+	  const options: CameraOptions = {
+  quality: 100,
+  destinationType: this.camera.DestinationType.FILE_URI,
+  encodingType: this.camera.EncodingType.JPEG,
+  mediaType: this.camera.MediaType.PICTURE
 }
+
+this.camera.getPicture(options).then((imageData) => {
+ let base64Image = 'data:image/jpeg;base64,' + imageData;
+}, (err) => {
+});
+}}
